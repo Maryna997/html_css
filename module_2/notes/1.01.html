@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS is amazing!</title>
+  </head>
+  <body>
+    <p style="color: tomato">Цей текст буде червоним.</p>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS is amazing!</title>
+    <style>
+      p {
+        color: tomato;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS is amazing!</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body></body>
+</html>
+
+<h1 id="title">Заголовок сторінки</h1>
+#title { font-weight: 500; color: orange; } #title { font-weight: 500; color:
+orange; }
+
+<h2 class="title">Привіт, я Mango.</h2>
+<p class="text">
+  Вітаю вас на моїй особистій сторінці. Тут можна подивитися
+  <a class="link" href="">проєкти</a>.
+</p>
+
+/* Застосовується до всіх тегів з класом title */ .title { color: skyblue; } /*
+Застосовується до всіх тегів із класом text */ .text { color: brown; } /*
+Застосовується до всіх тегів з класом link */ .link { color: tomato; }
+
+<h2>Цей заголовок не буде стилізовано</h2>
+<p>Цей текст не буде стилізовано</p>
+<p>
+  <a href="">Це посилання не буде стилізовано</a>
+</p>
+
+<a href="">Читайте наш блог!</a>
+
+<ul>
+  <li><a href="">Spotify</a></li>
+  <li><a href="">Netflix</a></li>
+</ul>
+
+<ul class="social-links">
+  <li><a href="">Twitter</a></li>
+  <li><a href="">Instagram</a></li>
+  <li><a href="">Facebook</a></li>
+</ul>
+
+/* Застосовується до всіх посилань у документі */ a { color: tomato; } /*
+Застосовується до посилань, які лежать усередині неупорядкованих списків */ ul a
+{ color: tomato; } /* Застосовується лише до посилань, що лежать усередині тега
+з класом social-links */ .social-links a { color: tomato; }
+<!--Зверни увагу, що комбінація селекторів читається справа наліво.-->
+
+#footer li а { font-weight:bold; }
+
+<!--Дочірній селектор допомагає вирішити цю проблему, вибираючи лише ті <li>, які є дочками (перша вкладеність) у списку ul.menu.-->
+.menu > li { border: 1px solid tomato; }
+
+<!--Аби показати взаємозв'язок між селектором і псевдокласом, ставити пробіл не потрібно. Якщо додати пробіл, то псевдоклас застосовується до всіх елементів документа.-->
+селектор:псевдоклас {Властивість}
+
+<p>
+  Відмінну шпаргалку за тегами можна знайти
+  <a class="link" href="<https://htmlreference.io>">за посиланням</a>.
+</p>
+.link { color: teal; } .link:hover { color: tomato; }
+
+<ul class="social-links">
+  <li><a class="link" href="<https://twitter.com>">Twitter</a></li>
+  <li><a class="link" href="<https://www.instagram.com>">Instagram</a></li>
+  <li><a class="link" href="<https://www.facebook.com>">Facebook</a></li>
+</ul>
+
+<!--Додамо до посилання в списку:
+базовий стиль;
+стиль при наведенні.-->
+.social-links .link { color: teal; } .social-links .link:hover { color: tomato;
+} .social-links .link:active { color: red; }
+
+<ul class="social-links">
+  <li><a class="link" href="<https://twitter.com>">Twitter</a></li>
+  <li><a class="link" href="<https://www.instagram.com>">Instagram</a></li>
+  <li><a class="link" href="<https://www.facebook.com>">Facebook</a></li>
+</ul>
+
+.social-links .link { color: teal; }
+
+<!--Два і більше селекторів для одного правила поділяються комою-->
+.social-links .link:hover, .social-links .link:focus { color: orange; }
