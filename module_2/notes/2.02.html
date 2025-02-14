@@ -148,3 +148,61 @@ text-shadow: <зміщення по x>, <зміщення по y>, <радіус
   Тег <span class="accent">span</span> це універсальний контейнер для дрібного
   текстового контенту.
 </p>
+
+body { /* Тепер (майже) всі елементи відображаються шрифтом без засічок */
+font-family: 'Helvetica Neue', 'Roboto', 'Verdana', sans-serif; color: #2a2a2a;
+background-color: #fafafa; line-height: 1.5;}
+
+<!--Щоб не задавати font-family кожному заголовку окремо, можемо написати CSS-правило із селектором усіх тегів від h1 до h6 і встановити потрібний шрифт.-->
+h1, h2, h3, h4, h5, h6 { font-family: 'Tahoma'; }
+
+<!--Властивість list-style-type визначає тип маркера списку.-->
+ul, ol { list-style-type: none; }
+
+<head>
+  <!-- Спочатку нормалізатор -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+  />
+  <!-- Потім ваші стилі -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<section class="section">
+  <h1 class="section-title">Section title</h1>
+  <a class="section-link">Section link</a>
+</section>
+<!--Щоб отримати доступ до значення змінної, застосовується вбудована функція var(), у якій перший аргумент — ім'я змінної.-->
+:root { --brand-color: #3f51b5; } .section { /* Інші стилі */ border: 2px solid
+var(--brand-color); } .section-title { /* Інші стилі */ color:
+var(--brand-color); } .section-link { /* Інші стилі */ background-color:
+var(--brand-color); }
+
+<p class="value1 value2 value3">Random text content :)</p>
+.value1 { background-color: green; color: red; font-weight: 500; } .value2 {
+color: blue; } .value3 { font-size: 24px; }
+
+<p class="alert success">Account registration success</p>
+<p class="alert warning">Attention, tariffs will be changed</p>
+<p class="alert error">Transaction error</p>
+
+<!--Загальні стилі та стандартні стилі для всіх типів оповіщень-->
+.alert { font-size: 24px; font-weight: 500; color: black; }
+
+<!--Специфічні стилі для кожного типу оповіщень-->
+.success { color: green; } .warning { color: orange; } .error { color: red; }
+<!--Загальні стилі для всіх типів оповіщень-->
+.alert {} .alert.success { color: green; } .alert.warning { color: orange; }
+.alert.error { color: red; }
+
+<!--Загальні стилі для модальних вікон-->
+.modal {}
+<!--Специфічні стилі для кожного типу модального вікна-->
+.modal.success { text-decoration: underline; } .modal.warning { font-weight:
+700; } .modal.error { text-transform: uppercase; }
+
+<!--Контекстний, є пропуск. Вибере нащадків із класом success всередині елемента класом alert-->
+.alert .success {}
+<!--Комбінований, немає пробілу. Вибере тільки елемент, у якого є обидва класи-->
+.alert.success {}
