@@ -84,3 +84,150 @@ ol {
     margin-bottom: 0;
     padding-left: 0;
 }
+
+
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 5px solid orangered;
+}
+.box:hover {
+    border-color: cyan;
+}
+
+
+
+.box {
+    width: 200px;
+    height: 200px;
+
+    border-top: 3px solid blue;
+    border-right: 5px dotted black;
+    border-bottom: 7px dashed palevioletred;
+    border-left: 9px double green;
+}
+
+
+/* Аби заокруглити всі кути рамки,
+застосовується властивість border-radius. Значення можуть бути як абсолютні (px),
+так і відносні (%). Якщо квадратному елементу задати радіус 50%,
+це перетворить його на коло. */
+
+
+/* верхній лівий кут */
+border-top-left-radius: значення;
+
+/* верхній правий кут */
+border-top-right-radius: значення;
+
+/* нижній правий кут */
+border-bottom-right-radius: значення;
+
+/* нижній лівий кут */
+border-bottom-left-radius: значення;
+
+
+
+
+<div class="thumb"><img src="https://images.pexels.com/photos/33492/cat-red-cute-mackerel.jpg?auto=compress&cs=tinysrgb&h=480&w=640" alt=""></div>
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.thumb {
+    border: 10px solid green;
+    border-radius: 50px;
+    width: 480px;
+
+    overflow: hidden;
+}
+
+
+overflow: visible | hidden | scroll | auto 
+
+
+
+.box {
+    width: 300px;
+    background-color: tomato;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Аби скоротити запис,
+можна скористатися складаною властивістю margin,
+задати нульові вертикальні значення й автоматичні горизонтальні. */ 
+
+.box {
+    width: 300px;
+    background-color: tomato;
+    margin: 0 auto;
+}
+
+
+.container {
+    width: 480px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.link {
+    background-color: tomato;
+    color: white;
+
+    /* ✅ Працює */
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+
+    /* ❌ Ніякого ефекта */
+    width: 1000px;
+    height: 1000px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+<div class="tabs"><div class="pane is-active">1 - Lorem ipsum dolor sit amet consectetur.</div><div class="pane">2 - Lorem ipsum dolor sit amet consectetur.</div><div class="pane">3 - Lorem ipsum dolor sit amet consectetur.</div></div>
+
+.pane {
+    display: none;
+    padding: 8px;
+    border: 1px solid blue;
+    border-radius: 4px;
+}
+
+.pane.is-active {
+    display: block;
+}
+
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+object-fit: fill | contain | cover | scale-down | none
+
+
+<div class="thumb"><img src="" alt="" /></div>
+.thumb {
+    height: 400px;
+    width: 300px;
+}
+.thumb img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
