@@ -231,3 +231,153 @@ object-fit: fill | contain | cover | scale-down | none
     width: 100%;
     object-fit: cover;
 }
+
+
+display: flex | inline-flex 
+
+
+<ul class="menu"><li class="item"><a href="" class="link">Головна</a></li><li class="item"><a href="" class="link">Блог</a></li><li class="item"><a href="" class="link">Подкасти</a></li><li class="item"><a href="" class="link">Контакти</a></li></ul>
+
+.menu {
+    display: flex;
+    gap: 8px;
+}
+
+
+flex-direction: row | row-reverse | column | column-reverse
+
+
+justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+
+align-items: stretch | flex-start | flex-end | center | baseline
+
+
+
+.card {
+    display: flex;
+    align-items: flex-start;
+}
+
+flex-wrap: nowrap | wrap | wrap-reverse
+
+
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+/* Останній крок — задати розмір flex-елементів li.item. Ширина вказується у відсотках від загальної ширини батьківського елемента (100%) за такою формулою. */
+100% - кількість_проміжків_у_рядку * значення_одного_проміжку) / кількість_елементів_у_рядку 
+/* Кількість проміжків між елементами в рядку завжди на одиницю менша за кількість елементів. У нашій сітці три елементи в рядок,
+отже в одному рядку є два проміжки по 10px. */
+.item {
+    width: calc((100% - 2*10px) / 3);
+}
+
+
+align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch
+
+
+flex-basis: auto | значення
+
+
+/* Властивість flex-grow — визначає здатність елемента займати більше місця (рости),
+ніж початковий розмір. Значення визначається як пропорція (частка) вільного місця в контейнері. */
+flex-grow: частка
+
+
+
+<div class="page-container"><header>Page header</header><main>Main content</main><footer>Page footer</footer></div>
+/* Перше,
+що зробимо,
+— задамо йому мінімальну висоту 100% висоти вкладки браузера на екрані користувача,
+використовуючи одиниці vh (viewport height — відсоток від висоти області перегляду 5vh=5% висоти). */
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Залишилося задати main властивість flex-grow,
+щоб дозволити йому займати все вільне місце на головній осі,
+відсуваючи «футер» у її кінець,
+тобто вниз. */
+main {
+    flex-grow: 1;
+}
+
+flex-shrink: значення;
+/* Значення задається у вигляді пропорції (частка, фактор). За замовчуванням у всіх елементів встановлено значення 1,
+тобто елементи стискатимуться за потреби. Значення 0 заборонить елементу стискатися. Негативні значення задавати не можна. */
+
+.icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+}
+
+
+/* Властивість align-self дозволяє елементу змінити своє розташування на cross axis,
+перевизначивши собі значення властивості align-items від контейнера. */
+align-self: auto | flex-start | flex-end | center | baseline | stretch
+
+
+/* Для вирішення проблеми вертикального розтягування картинки ми використовували властивість контейнера align-items. Властивість align-self дозволяє вирішити цю проблему більш точково,
+перевизначивши значення align-items тільки для зображення. */
+.card img {
+    align-self: flex-start;
+}
+
+
+
+<ul class="list"><li class="list-item">HTML</li><li class="list-item">CSS</li><li class="list-item">JavaScript</li><li class="list-item">React</li></ul>.list-item {
+    color: blue;
+}
+
+.list-item:first-child {
+    color: red;
+}
+
+.list-item:last-child {
+    color: green;
+}
+
+
+.list-item {
+    margin-bottom: 12px;
+}
+
+.list-item:last-child {
+    margin-bottom: 0;
+}
+
+
+.list-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+
+
+<ul class="list"><li class="list-item">1</li><li class="list-item">2</li><li class="list-item">3</li><li class="list-item">4</li><li class="list-item">5</li><li class="list-item">6</li><li class="list-item">7</li><li class="list-item">8</li><li class="list-item">9</li><li class="list-item">10</li></ul>
+
+/* Для вибору всіх парних елементів можна використовувати формулу 2n або її псевдонім — значення even,
+зарезервоване слово. */
+.list-item:nth-child(2n) {
+    background-color: orange;
+}
+
+/* Аналогічно використовуючи псевдонім */
+.list-item:nth-child(even) {
+    background-color: orange;
+}
+
+/* Для вибору непарних елементів можна використовувати формулу 2n+1 або її псевдонім — значення odd,
+зарезервоване слово. */
+.list-item:nth-child(2n + 1) {
+    background-color: orange;
+}
+
+/* Аналогічно використовуючи псевдонім */
+.list-item:nth-child(odd) {
+    background-color: orange;
+}
