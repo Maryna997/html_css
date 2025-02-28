@@ -1,0 +1,184 @@
+background-image: url(шлях до зображення);
+
+background-repeat: repeat | repeat-x | repeat-y | no-repeat .hero {
+    background-color: #2a2a2a;
+    background-image: url(шлях до зображення);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* Поставить фонове зображення по центру */
+background-position: 50% 50%;
+
+/* Поставить фонове зображення 100px від лівого краю та 200px від верху */
+background-position: 100px 200px;
+
+/* Поставить фонове зображення у нижній правий кут */
+background-position: right bottom;
+
+/* Поставить фонове зображення у верхній лівий кут */
+background-position: left top;
+
+
+backrgound-position: x зміщення-x y зміщення-y backrgound-position: right 30px bottom 20px;
+
+
+background-size: auto | значення | cover | contain
+/* Вихідні розміри зображення, значення за замовчуванням */
+background-size: auto auto;
+
+/* Ширина 200px, висота буде пропорційна */
+background-size: 200px;
+
+/* Ширина 200px, висота 300px */
+background-size: 200px 300px;
+
+
+/* Значенням також можуть бути два зарезервовані слова: cover і contain. Функція обох значень — максимально вмістити у контейнер фонове зображення,
+але різними способами. cover — за рахунок обрізання зайвого. contain — за рахунок утворення порожнього простору в контейнері. */
+
+
+background-image: url(шлях до зображення 1),
+url(шлях до зображення 2);
+background-size: 100px,
+cover;
+background-position: top right,
+center;
+background-repeat: repeat-x,
+no-repeat;
+
+
+background-image: linear-gradient(<напрямок>,
+    <колір-1>,
+    <колір-2>,
+    <колір-3>,
+    ...)
+/* 
+Напрямок градієнта задається ключовими словами to top,
+to right,
+to bottom,
+to left і їх комбінаціями. Якщо напрямок не вказано,
+використовується значення за замовчуванням — зверху-вниз (to bottom). У разі коли напрямок задано парою ключових слів,
+наприклад,
+to top left,
+початкова точка градієнта буде розташована в правому нижньому кутку,
+тобто протилежному. */
+
+/* Напрямок також можна задати кутом нахилу в градусах — одиниця deg. Значення 0deg є аналогічним to top. Збільшення кута повертає напрямок лінії градієнта — тобто прямої,
+яка проходить через центр блоку і вздовж якої розподіляються кольори,
+за годинниковою стрілкою. */
+
+
+background-image: linear-gradient(to bottom,
+    rgba(255, 0, 0, 0.3),
+    rgba(255, 0, 0, 0.3)),
+url(шлях до зображення);
+
+
+background: background-color background-image background-repeat background-position background-attachment background-size box-shadow: <x-offset><y-offset><blur><spread><color>
+/* x-offset — горизонтальне зміщення. Позитивне значення зміщує тінь праворуч від блоку,
+негативне – ліворуч. Обов'язкове значення.
+ y-offset — вертикальне зміщення. Позитивне значення зміщує тінь вниз,
+негативне - вгору. Обов'язкове значення.
+ blur — радіус розмиття. Чим більше значення,
+тим сильніше розмита тінь. Необов'язкове значення.
+ spread — радіус поширення. Позитивне значення збільшує тінь,
+негативне — зменшує. Необов'язкове значення.
+ color — колір тіні. Можна використовувати будь-який формат запису кольору. Необов'язкове значення. */
+
+
+box-shadow: <x-offset><y-offset><blur><spread><color>,
+<x-offset><y-offset><blur><spread><color>,
+<x-offset><y-offset><blur><spread><color>,
+...
+/* box-shadow: inset <x-offset><y-offset><blur><spread><color> */
+
+
+
+/* Встановлюємо колір заливки у спокійному стані. */
+.icon {
+    fill: #2a2a2a;
+}
+
+/* Змінюємо колір заливки при ховері. */
+.icon:hover {
+    fill: #03a9f4;
+}
+
+<svg aria-hidden="true" style="position:absolute;width:0;height:0" xmlns="<http://www.w3.org/2000/svg>" overflow="hidden">
+<defs>
+< !-- Trash can icon -->
+<symbol id="delete" viewBox="0 0 32 32">
+<path d="M8 25.333C8 26.8 9.2 28 10.667 28h10.667c1.467 0 2.667-1.2 2.667-2.667v-16h-16v16zm17.333-20h-4.667L19.333 4h-6.667l-1.333 1.333H6.666V8h18.667V5.333z" />
+</symbol>
+< !-- Camera icon -->
+<symbol id="camera" viewBox="0 0 32 32">
+<path d="M20.267 16a4.267 4.267 0 11-8.534 0 4.267 4.267 0 018.534 0z" /><path d="M12 2.667L9.56 5.334H5.333a2.675 2.675 0 00-2.667 2.667v16c0 1.467 1.2 2.667 2.667 2.667h21.333c1.467 0 2.667-1.2 2.667-2.667v-16c0-1.467-1.2-2.667-2.667-2.667h-4.227l-2.44-2.667h-8zm4 20c-3.68 0-6.667-2.987-6.667-6.667S12.32 9.333 16 9.333 22.667 12.32 22.667 16 19.68 22.667 16 22.667z" />
+</symbol>
+< !-- Portfolio icon -->
+<symbol id="work" viewBox="0 0 32 32">
+<path d="M26.667 8h-5.333V5.333a2.658 2.658 0 00-2.667-2.667h-5.333a2.658 2.658 0 00-2.667 2.667V8H5.334a2.646 2.646 0 00-2.653 2.667l-.013 14.667a2.658 2.658 0 002.667 2.667h21.333a2.658 2.658 0 002.667-2.667V10.667A2.658 2.658 0 0026.668 8zm-8 0h-5.333V5.333h5.333V8z" />
+</symbol>
+</defs>
+</svg>
+
+<svg><use href="./шлях-до-svg-спрайту/имэя-спрайта.svg#ідентифікатор-символа"></use></svg>
+
+
+.box {
+    /* стилі елемента */
+}
+
+.box::before {
+    /* стилі псевдоелемента before */
+}
+
+.box::after {
+    /* стилі псевдоелемента after */
+}
+
+
+
+
+❌
+
+/* Некоректно оформлені загальні стилі */
+.box::before::after {
+    font-size: 30px;
+}
+
+/* Коректно */
+
+.box::before {
+    content: 'Цей текст у before';
+    color: orange;
+}
+
+.box::after {
+    content: 'Цей текст у after';
+    color: teal;
+}
+
+✅
+
+/* Коректно оформлені загальні стилі */
+.box::before,
+.box::after {
+    font-size: 30px;
+}
+
+
+/* Застосувати стилі до псевдоелементу .box::before при ховері на елемент .box */
+.box:hover::before {
+    background-color: green;
+}
+
+/* Застосувати стилі до псевдоелементу.box::after при ховері на елемент .box */
+.box:hover::after {
+    background-color: tomato;
+}
+
+
+position: static | relative | absolute | fixed | sticky
