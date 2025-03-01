@@ -107,27 +107,7 @@ box-shadow: <x-offset><y-offset><blur><spread><color>,
     fill: #03a9f4;
 }
 
-<svg aria-hidden="true" style="position:absolute;width:0;height:0" xmlns="<http://www.w3.org/2000/svg>" overflow="hidden">
-<defs>
-< !-- Trash can icon -->
-<symbol id="delete" viewBox="0 0 32 32">
-<path d="M8 25.333C8 26.8 9.2 28 10.667 28h10.667c1.467 0 2.667-1.2 2.667-2.667v-16h-16v16zm17.333-20h-4.667L19.333 4h-6.667l-1.333 1.333H6.666V8h18.667V5.333z" />
-</symbol>
-< !-- Camera icon -->
-<symbol id="camera" viewBox="0 0 32 32">
-<path d="M20.267 16a4.267 4.267 0 11-8.534 0 4.267 4.267 0 018.534 0z" /><path d="M12 2.667L9.56 5.334H5.333a2.675 2.675 0 00-2.667 2.667v16c0 1.467 1.2 2.667 2.667 2.667h21.333c1.467 0 2.667-1.2 2.667-2.667v-16c0-1.467-1.2-2.667-2.667-2.667h-4.227l-2.44-2.667h-8zm4 20c-3.68 0-6.667-2.987-6.667-6.667S12.32 9.333 16 9.333 22.667 12.32 22.667 16 19.68 22.667 16 22.667z" />
-</symbol>
-< !-- Portfolio icon -->
-<symbol id="work" viewBox="0 0 32 32">
-<path d="M26.667 8h-5.333V5.333a2.658 2.658 0 00-2.667-2.667h-5.333a2.658 2.658 0 00-2.667 2.667V8H5.334a2.646 2.646 0 00-2.653 2.667l-.013 14.667a2.658 2.658 0 002.667 2.667h21.333a2.658 2.658 0 002.667-2.667V10.667A2.658 2.658 0 0026.668 8zm-8 0h-5.333V5.333h5.333V8z" />
-</symbol>
-</defs>
-</svg>
-
-<svg><use href="./шлях-до-svg-спрайту/имэя-спрайта.svg#ідентифікатор-символа"></use></svg>
-
-
-.box {
+<svg aria-hidden="true" style="position:absolute;width:0;height:0" xmlns="<http://www.w3.org/2000/svg>" overflow="hidden"><defs>< !-- Trash can icon --><symbol id="delete" viewBox="0 0 32 32"><path d="M8 25.333C8 26.8 9.2 28 10.667 28h10.667c1.467 0 2.667-1.2 2.667-2.667v-16h-16v16zm17.333-20h-4.667L19.333 4h-6.667l-1.333 1.333H6.666V8h18.667V5.333z" /></symbol>< !-- Camera icon --><symbol id="camera" viewBox="0 0 32 32"><path d="M20.267 16a4.267 4.267 0 11-8.534 0 4.267 4.267 0 018.534 0z" /><path d="M12 2.667L9.56 5.334H5.333a2.675 2.675 0 00-2.667 2.667v16c0 1.467 1.2 2.667 2.667 2.667h21.333c1.467 0 2.667-1.2 2.667-2.667v-16c0-1.467-1.2-2.667-2.667-2.667h-4.227l-2.44-2.667h-8zm4 20c-3.68 0-6.667-2.987-6.667-6.667S12.32 9.333 16 9.333 22.667 12.32 22.667 16 19.68 22.667 16 22.667z" /></symbol>< !-- Portfolio icon --><symbol id="work" viewBox="0 0 32 32"><path d="M26.667 8h-5.333V5.333a2.658 2.658 0 00-2.667-2.667h-5.333a2.658 2.658 0 00-2.667 2.667V8H5.334a2.646 2.646 0 00-2.653 2.667l-.013 14.667a2.658 2.658 0 002.667 2.667h21.333a2.658 2.658 0 002.667-2.667V10.667A2.658 2.658 0 0026.668 8zm-8 0h-5.333V5.333h5.333V8z" /></symbol></defs></svg><svg><use href="./шлях-до-svg-спрайту/имэя-спрайта.svg#ідентифікатор-символа"></use></svg>.box {
     /* стилі елемента */
 }
 
@@ -182,3 +162,302 @@ box-shadow: <x-offset><y-offset><blur><spread><color>,
 
 
 position: static | relative | absolute | fixed | sticky
+
+
+.chat-button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1653/1653630.png");
+    background-size: contain;
+
+    cursor: pointer;
+}
+
+
+
+transition-property: <властивість>transition-duration: <час>transition-timing-function: <функція розподілу часу>transition-delay: <затримка>
+
+ /*  Set transition values  */
+ transition-property: background-color,
+ transform;
+ transition-duration: 500ms;
+ transition-timing-function: linear;
+ transition-delay: 0;
+ }
+
+ /* On hover, change the values of animated properties */
+ .box:hover {
+     background-color: teal;
+     transform: rotate(180deg);
+ }
+
+ /* Якщо тривалість переходу не вказана,
+зміна значень відбудеться миттєво,
+без анімації. Властивість transition-duration задає проміжок часу,
+протягом якого має здійснитися перехід. Значення властивості вказується в: секундах: 2s або 0.5s мілісекундах: 2000ms або 500ms */
+
+
+/* Значення властивості задається через формулу Безьє,
+яка описує швидкість переходу властивості від одного значення до іншого за час,
+зазначений в transition-duration,
+
+У CSS є кілька ключових слів для опису базових функцій Безьє,
+що часто використовуються. Ключові слова: ease — перехід починається повільно,
+швидко прискорюється,
+а потім знову сповільнюється в кінці. linear — перехід має рівномірну швидкість. ease-in — починається повільно,
+швидкість переходу збільшується до повного завершення переходу. ease-out — починається швидко,
+уповільнюється протягом переходу. ease-in-out — починається повільно,
+прискорюється,
+а потім знову сповільнюється. За замовчуванням використовується значення ease. */
+
+
+
+transition: [property] [duration] [timing-function] [delay]
+transition: background-color 500ms linear,
+transform 500ms ease-in-out;
+
+
+
+transition-property: color,
+background-color;
+transition-duration: 150ms;
+transition-timing-function: ease-in-out;
+transition-delay: 0ms,
+150ms;
+
+transition: color 150ms ease-in-out 0ms,
+background-color 150ms ease-in-out 150ms;
+
+
+
+
+/* Ім'я має бути описовим, тобто вказувати, що це за анімація. */
+@keyframes ім'яАнімації {
+ 0% {
+    /* Властивості, що змінюються */
+}
+
+/* Довільна кількість проміжних кадрів */
+
+100% {
+    /* Властивості, що змінюються */
+}
+}
+
+
+
+@keyframes changeBgColor {
+    0% {
+        background-color: teal;
+    }
+
+    50% {
+        background-color: orange;
+    }
+
+    100% {
+        background-color: deepskyblue;
+    }
+}
+
+
+/* Щоб використати вже оголошену анімацію,
+потрібно вказати її ім'я як значення для властивості animation-name. */
+.box {
+    animation-name: changeBgColor;
+}
+
+
+.box {
+    /* Базові стилі елемента */
+}
+
+/* Додаємо анімацію за ховером */
+.box:hover {
+    animation-name: changeBgColor;
+    animation-duration: 3000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 5;
+    /* animation-play-state: paused; */
+    animation-delay: 1s;
+}
+
+
+
+
+
+.box:hover {
+    animation-name: changeBgColor;
+    animation-duration: 3000ms;
+}
+
+@keyframes changeBgColor {
+    0% {
+        background-color: teal;
+    }
+
+    50% {
+        background-color: orange;
+    }
+
+    100% {
+        background-color: deepskyblue;
+    }
+}
+
+
+
+animation-fill-mode: none | forwards | backwards | both
+/* none — стилі анімації впливають на елемент тільки під час анімації. До та після анімації елемент знаходиться у своєму початковому стані. Це значення за замовчуванням. forwards — стилі,
+застосовані в кінці анімації,
+застосовуються до елемента після завершення анімації. backwards — початкові стилі анімації будуть застосовані до елемента ще до старту анімації. both — поєднує forwards і backwards,
+стилі застосовуються до та після анімації. */
+
+
+
+/* animation-direction:
+normal — анімація відтворюється від початкового до кінцевого кадру,
+а потім одразу повертається до початкового кадру для наступного повторення (скидається в початковий стан). Це значення використовується за замовчуванням. 
+reverse — анімація відтворюється у зворотному напрямку,
+починаючи від кінцевого кадру до початкового,
+а потім одразу повертається до кінцевого кадру для наступного повторення 
+alternate — спочатку відтворення здійснюється від початкового і до кінцевого кадру,
+після чого відбувається зміна напрямку при кожному наступному повторенні. 
+alternate-reverse — спочатку відтворення здійснюється від кінцевого і до початкового кадру,
+після чого відбувається зміна напрямку при кожному наступному повторенні.
+ */
+
+
+
+animation: [name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state]
+/* Значення необов'язкових властивостей можна пропустити або міняти місцями.
+
+Виняток становлять властивості duration і delay — значення тривалості анімації завжди має вказуватися до затримки. */
+
+
+@keyframes changeHeaderColor {
+    0% {
+        background-color: #d32f2f;
+    }
+
+    33% {
+        background-color: #388e3c;
+    }
+
+    66% {
+        background-color: #1976d2;
+    }
+
+    100% {
+        background-color: #d32f2f;
+    }
+}
+animation-name: changeHeaderColor;
+animation-duration: 6s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-delay: 2s;
+animation-fill-mode: backwards;
+animation-direction: alternate;
+
+animation: changeHeaderColor 6s ease-in-out infinite 2s backwards alternate;
+
+
+transform: none | <тип трансформації><тип трансформації>...
+
+
+
+.box {
+    transform: scale(1.15);
+}
+
+/* Функції scaleX(tx),
+scaleY(ty) і scale(tx, ty) масштабують блок по ширині та/або висоті,
+не впливаючи на геометрію навколишніх елементів. Якщо для scale() задано певне значення,
+друге буде таким самим. */
+
+/* Початковий масштаб елемента — 1. Значення від 1 до 0 зменшують елемент. Значення більше ніж 1,
+навпаки,
+збільшують. Наприклад,
+значення scale(1.25) — це 125% від початкового розміру,
+а scale(0.75) — 75%. */
+
+
+.box {
+    transform: rotate(45deg);
+}
+/* Значення можна передати не лише в градусах,
+а й в «обертах» (одиниця turn). Наприклад,
+rotate(0.5turn) — це півоберту,
+аналог rotate(180deg). */
+
+
+.box {
+    transform: translate(100px, 200px);
+}
+/* Функції translateX(tx),
+translateY(ty) і translate(tx, ty) переміщають елемент у горизонтальному (вісь X) та/або вертикальному (вісь Y) напрямках щодо початкового положення. Позитивні значення X зміщують елемент праворуч,
+негативні — ліворуч. Позитивні значення Y зміщують елемент вниз,
+негативні — вгору. */
+
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #bdbdbd;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3f51b5;
+
+    transform: translatey(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.box:hover .overlay {
+    transform: translatey(0);
+}
+
+
+
+<div class="parent"><div class="box"></div></div>
+.parent {
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* Функції skewX(кут),
+skewY(кут) і skew(x-кут, y-кут) використовуються для визначення параметрів викривлення (нахилу, деформування) сторін елемента відносно координатних осей. Якщо для skew() вказано тільки одне значення,
+друге буде дорівнювати 0,
+тобто це буде аналог skewX(). */
+
+.box {
+    transform: skew(30deg);
+}
