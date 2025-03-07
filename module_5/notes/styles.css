@@ -1,1 +1,44 @@
-<form name="feedback_form" autocomplete="off" novalidate>< !-- Елементи форми --></form>
+input {
+    font-family: inherit;
+}
+
+input::placeholder {
+    color: teal;
+    font-weight: 700;
+}
+
+input:hover::placeholder,
+input:focus::placeholder {
+    color: orange;
+}
+
+
+input {
+    border: 1px solid orange;
+}
+
+input:placeholder-shown {
+    border-color: blue;
+}
+
+form:focus-within {
+    border-color: blue;
+}
+
+
+input:checked {
+    box-shadow: 0 0 0 2px orangered;
+}
+
+
+input[type="checkbox"] {}
+
+input[type="checkbox"]:checked {
+    box-shadow: 0 0 0 2px orangered;
+}
+
+/* Для цього потрібно використовувати селектор X+Y. Цей селектор вибирає тільки той елемент Y,
+який в HTML-розмітці слідує відразу ж за X. */
+ul+p {
+    background-color: yellow;
+}
