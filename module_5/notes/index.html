@@ -124,3 +124,290 @@
 <input type="checkbox" name="hobby" value="music" id="music" />
 <label for="music">Music</label>
 input[type="checkbox"]:checked + label { color: blue; }
+
+<form>
+  <fieldset>
+    <legend>Заголовок групи</legend>
+    <!-- Група інтерактивних елементів -->
+  </fieldset>
+
+  <fieldset>
+    <legend>Заголовок групи</legend>
+    <!-- Група інтерактивних елементів -->
+  </fieldset>
+  <!-- + CSS -->
+
+  <button type="submit">Submit</button>
+</form>
+
+<button type="button">Active button</button>
+<button type="button" disabled>Disabled button</button>
+<!--  + CSS -->
+
+<form class="form">
+  <fieldset class="form-group">
+    <legend class="group-title">Enter your contact details</legend>
+    <label class="form-label">
+      Name
+      <input type="text" name="username" />
+    </label>
+    <label class="form-label">
+      Email
+      <input type="email" name="email" />
+    </label>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <legend class="group-title">Your favourite programming language</legend>
+    <div class="form-field">
+      <input type="checkbox" name="language" value="python" id="python" />
+      <label class="form-label" for="python">Python</label>
+    </div>
+    <div class="form-field">
+      <input type="checkbox" name="language" value="js" id="js" />
+      <label class="form-label" for="js">JavaScript</label>
+    </div>
+    <div class="form-field">
+      <input type="checkbox" name="language" value="ruby" id="ruby" />
+      <label class="form-label" for="ruby">Python</label>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <legend class="group-title">I want to receive</legend>
+    <div class="form-field">
+      <input type="checkbox" name="newsletter" value="weekly" id="weekly" />
+      <label class="form-label" for="weekly">The weekly newsletter</label>
+    </div>
+    <div class="form-field">
+      <input type="checkbox" name="newsletter" value="offers" id="offers" />
+      <label class="form-label" for="offers">Offers from the company</label>
+    </div>
+    <div class="form-field">
+      <input
+        type="checkbox"
+        name="newsletter"
+        value="associated_offers"
+        id="associated_offers"
+      />
+      <label class="form-label" for="associated_offers"
+        >Offers from associated companies</label
+      >
+    </div>
+  </fieldset>
+
+  <button type="submit">Subscribe</button>
+</form>
+<!--  + CSS -->
+
+<input type="email" name="email" required />
+
+<table>
+  <tr>
+    <th>Product</th>
+    <th>Amount</th>
+    <th>Fat</th>
+    <th>Carbs</th>
+    <th>Protein</th>
+    <th>Calories</th>
+  </tr>
+  <tr>
+    <td>Oatmeal</td>
+    <td>60g</td>
+    <td>4,2</td>
+    <td>32,46</td>
+    <td>8,46</td>
+    <td>218</td>
+  </tr>
+  <tr>
+    <td>Chicken eggs</td>
+    <td>120g</td>
+    <td>13,05</td>
+    <td>1,12</td>
+    <td>15,32</td>
+    <td>188</td>
+  </tr>
+  <tr>
+    <td>Apple</td>
+    <td>180g</td>
+    <td>0,31</td>
+    <td>24,86</td>
+    <td>0,47</td>
+    <td>94</td>
+  </tr>
+</table>
+
+<table>
+  <!-- Розмітка рядків заголовків -->
+
+  <!-- Розмітка рядків з даними -->
+
+  <tr>
+    <th>Total</th>
+    <td></td>
+    <td>17,56</td>
+    <td>58,53</td>
+    <td>24,25</td>
+    <td>500</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th scope="col">Product</th>
+    <th scope="col">Amount</th>
+    <th scope="col">Fat</th>
+    <th scope="col">Carbs</th>
+    <th scope="col">Protein</th>
+    <th scope="col">Calories</th>
+  </tr>
+
+  <!-- Розмітка рядків з даними -->
+
+  <tr>
+    <th scope="row">Total</th>
+    <td></td>
+    <td>17,56</td>
+    <td>58,53</td>
+    <td>24,25</td>
+    <td>500</td>
+  </tr>
+</table>
+<!-- Так само, якщо клітинка містить групу рядків, тобто значення rowgroup і для групи стовпців colgroup. -->
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Product</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Fat</th>
+      <th scope="col">Carbs</th>
+      <th scope="col">Protein</th>
+      <th scope="col">Calories</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Oatmeal</td>
+      <td>60g</td>
+      <td>4,2</td>
+      <td>32,46</td>
+      <td>8,46</td>
+      <td>218</td>
+    </tr>
+    <tr>
+      <td>Chicken eggs</td>
+      <td>120g</td>
+      <td>13,05</td>
+      <td>1,12</td>
+      <td>15,32</td>
+      <td>188</td>
+    </tr>
+    <tr>
+      <td>Apple</td>
+      <td>180g</td>
+      <td>0,31</td>
+      <td>24,86</td>
+      <td>0,47</td>
+      <td>94</td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <th scope="row">Total</th>
+      <td></td>
+      <td>17,56</td>
+      <td>58,53</td>
+      <td>24,25</td>
+      <td>500</td>
+    </tr>
+  </tfoot>
+</table>
+
+<h1>Example breakfast template</h1>
+<table>
+  <!-- Розмітка таблиці -->
+</table>
+
+<table>
+  <caption>
+    Example breakfast template
+  </caption>
+
+  <!-- Розмітка таблиці -->
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cloud service</th>
+      <th>Statistics</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>Users</th>
+      <th>Visits</th>
+      <th>Volume</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Google</td>
+      <td>12000</td>
+      <td>307000</td>
+      <td>1000 Tb</td>
+    </tr>
+    <tr>
+      <td>Amazon</td>
+      <td>9000</td>
+      <td>200500</td>
+      <td>800 Tb</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ДО об'єднання клітинок -->
+<tfoot>
+  <tr>
+    <th scope="row">Total</th>
+    <td></td>
+    <td>17,56</td>
+    <td>58,53</td>
+    <td>24,25</td>
+    <td>500</td>
+  </tr>
+</tfoot>
+
+<!-- ПІСЛЯ об'єднання клітинок -->
+<tfoot>
+  <tr>
+    <th scope="row" colspan="2">Total</th>
+    <td>17,56</td>
+    <td>58,53</td>
+    <td>24,25</td>
+    <td>500</td>
+  </tr>
+</tfoot>
+
+<!-- Для того щоб розширити комірку по горизонталі, ми використовували атрибут colspan. Для того щоб зробити те ж саме по вертикалі, існує атрибут rowspan. -->
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Cloud service</th>
+      <th colspan="3">Statisctics</th>
+    </tr>
+    <tr>
+      <th>Users</th>
+      <th>Visits</th>
+      <th>Volume</th>
+    </tr>
+  </thead>
+
+  <!-- Решта розмітки таблиці -->
+</table>

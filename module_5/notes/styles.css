@@ -42,3 +42,15 @@ input[type="checkbox"]:checked {
 ul+p {
     background-color: yellow;
 }
+
+button:disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
+}
+
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
