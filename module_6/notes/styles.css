@@ -1,0 +1,51 @@
+@media media-type and (media-feature) {
+    /*
+  * Набір CSS-правил, які потрібно застосувати,
+  * якщо умова перевірки медіатипу та функції істинна
+  */
+}
+
+
+@media screen and (min-width: 900px) {
+    body {
+        background-color: orange;
+    }
+}
+
+
+
+/* CSS-правила нижче застосовуються, коли ширина в'юпорта більше або дорівнює 800px */
+@media (min-width: 800px) {
+    body {
+        background-color: orange;
+    }
+}
+
+
+
+/* CSS-правила застосовуються, коли ширина в'юпорта менше або дорівнює 600px */
+@media (max-width: 600px) {
+    body {
+        background-color: green;
+    }
+}
+
+
+
+body {
+    background-color: white;
+}
+
+/* Застосовується коли ширина в'юпорта менше або дорівнює 600px */
+@media (max-width: 600px) {
+    body {
+        background-color: green;
+    }
+}
+
+/* Застосовується коли ширина в'юпорта більше або дорівнює 800px */
+@media (min-width: 800px) {
+    body {
+        background-color: orange;
+    }
+}
