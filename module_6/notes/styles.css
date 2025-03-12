@@ -49,3 +49,291 @@ body {
         background-color: orange;
     }
 }
+
+
+
+/* Базовий стиль */
+body {
+    background-color: #fff;
+}
+
+/* При 900px і ширше перевизначаємо колір фона */
+@media (min-width: 900px) {
+    body {
+        background-color: #388e3c;
+    }
+}
+
+
+/* Базові стилі */
+body {
+    color: #2a2a2a;
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+/* Від 600px і більше, змінимо колір фону, розмір та колір тексту */
+@media (min-width: 600px) {
+    body {
+        background-color: #2196f3;
+        font-size: 20px;
+        color: #fff;
+    }
+}
+
+/* Від 900px і більше змінимо колір фону. */
+@media (min-width: 900px) {
+    body {
+        background-color: #4caf50;
+    }
+}
+
+
+
+@media print {
+    body {
+        color: green;
+    }
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+    body {
+        background-color: red;
+    }
+}
+
+
+/* Оператор or (буквально «АБО») дозволяє вказати набір виразів,
+при виконанні хоча б одного з яких виконається і медіазапит. Скажімо,
+необхідно застосувати однакові стилі в проміжку до 600px або після 900px. Логічний оператор or у коді записується у вигляді коми (, ). */
+@media screen and (max-width: 600px),
+(min-width: 900px) {
+    body {
+        background-color: orange;
+    }
+}
+
+
+body {
+    background-color: green;
+}
+
+@media (min-width: 600px) and (max-width: 960px) {
+    body {
+        background-color: gray;
+    }
+}
+
+
+
+body {
+    background-color: green;
+}
+
+@media (max-width: 600px) or (min-width: 960px) {
+    body {
+        background-color: gray;
+    }
+}
+
+
+@media not print {
+    /* ... */
+}
+
+
+/* При використанні оператора not обов'язково повинен бути вказаний тип носія.
+
+Якщо не вказати тип носія,
+тоді за замовчуванням для нього буде встановлено значення all . Таким чином,
+з’явиться вираз not all,
+який читатиметься буквально як «не застосовувати для всіх носіїв»,
+і медіазапит не виконається ніколи. */
+
+/* Ніколи не виконується */
+@media not (max-width: 500px) {
+    /* ... */
+}
+
+
+/* Наступний медіазапит виконається,
+тільки якщо сторінка буде відкрита на пристрої з екраном,
+а ширина перегляду буде більше 500px. */
+@media not screen and (max-width: 500px) {
+    body {
+        background-color: tomato;
+    }
+}
+
+
+
+
+selector {
+    /* Базові стилі */
+}
+
+@media (min-width: ширина-планшета) {
+    selector {
+        /* Стилі планшета */
+    }
+}
+
+@media (min-width: ширина-десктопа) {
+    selector {
+        /* Стилі робочого столу */
+    }
+}
+
+
+
+/* ❌ ПОГАНО */
+.box {
+    border: 1px solid black;
+}
+
+@media (min-width: 768px) {
+    .box {
+        border: none;
+        box-shadow: 2px 2px 4px 2px black;
+    }
+}
+
+@media (min-width: 1024px) {
+    .box {
+        box-shadow: none;
+    }
+}
+
+
+/* ✅ ДОБРЕ */
+@media (max-width: 767px) {
+    .box {
+        border: 1px solid black;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .box {
+        box-shadow: 2px 2px 4px 2px black;
+    }
+}
+
+
+
+
+/* + HTML */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 1170px;
+    min-width: 320px;
+    maring: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .element {
+        flex-basis: calc((100% - 10px) / 2);
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .container {
+        gap: 15px;
+    }
+
+    .element {
+        flex-basis: calc((100% - 30px) / 3);
+    }
+}
+
+/*
+ * SASS loop for background color generation.
+ */
+$colors: "#F44336", "#3F51B5", "#4CAF50", "#00BCD4", "#E91E63", "#009688";
+
+@each $color in $colors {
+    $idx: index($colors, $color);
+
+    .element:nth-child(#{$idx}) {
+        background-color: #{$color};
+    }
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+/* Зображення необхідно зробити блоковим,
+щоб прибрати нижній «зазор» рядкового елемента. Максимальна ширина в 100% гарантує,
+що зображення буде зменшуватися,
+якщо необхідно. При цьому не розтягнеться більше ніж 100% своєї оригінальної ширини,
+щоб не втрачати якість. */
+
+
+
+/* Растрові фонові зображення також необхідно підготувати для екранів підвищеної щільності. Для ретинізації фонового зображення необхідно встановити розмір фону елемента рівним розміру самого елемента. */
+.box {
+    width: 200px;
+    height: 300px;
+    background-image: url('photo.png');
+    background-size: 200px 300px;
+}
+
+
+/* Якщо елемент не має фіксованої ширини і висоти,
+тобто залежить від ширини батька,
+розмір фону можна задати значенням cover. Так,
+фон повністю заповнить елемент. */
+.box {
+    background-image: url('photo.png');
+    background-size: cover;
+}
+
+
+
+/* Базові стилі і 1x зображення */
+.box {
+    width: 200px;
+    height: 300px;
+    background-image: url('photo.png');
+    background-size: 200px 300px;
+}
+
+/* Перевизначаємо шлях до зображення
+   якщо щільність екрана як мінімум 2x */
+@media (min-resolution: 192dpi) {
+    .box {
+        background-image: url('photo@2x.png');
+    }
+}
+
+
+
+
+/* 1x screens, default value, 320x240 image */
+.box {
+    margin: 0 auto;
+    width: 320px;
+    height: 240px;
+    background-image: url("https://picsum.photos/id/237/320/240");
+    background-size: 320px 240px;
+}
+
+/* 2x screens, retina, 640x480 image */
+@media (min-resolution: 2x) {
+    .box {
+        background-image: url("https://picsum.photos/id/237/640/480");
+    }
+}
